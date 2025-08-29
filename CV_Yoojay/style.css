@@ -1,0 +1,183 @@
+/* Gaya Umum Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Efek fade-in saat Body dimuat */
+body.fade-in {
+    opacity: 1;
+}
+
+/* Kontainer utama untuk menengahkan konten */
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+/* Header dan Navigasi */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+}
+
+.main-nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: #5cafff;
+}
+
+/* Bagian Konten Utama */
+.main-content {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Gaya Khusus Homepage */
+.home-header {
+    margin-bottom: 20px;
+}
+
+.home-header h1 {
+    font-size: 4em;
+    margin: 0;
+    color: #333;
+}
+
+.home-header h2 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #555;
+}
+
+.profile-pic-container {
+    margin: 20px 0;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #ddd;
+    object-fit: cover;
+}
+
+/* Gaya Bagian untuk halaman Tentang dan Keahlian */
+.content-section {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.content-section h2 {
+    border-bottom: 2px solid #5cafff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.info-grid, .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.info-item, .skill-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #5cafff;
+}
+
+.info-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Navigasi Panah */
+.arrow-nav {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.arrow-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.arrow-btn:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Desain Responsif */
+@media (max-width: 768px) {
+    .home-header h1 {
+        font-size: 3em;
+    }
+    .home-header h2 {
+        font-size: 1.5em;
+    }
+    .main-nav {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        margin-top: 10px;
+    }
+    .info-grid, .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
